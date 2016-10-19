@@ -1,0 +1,140 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	font-size: 22px;
+    font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+	color: black;
+	text-align: center;
+	/*border: 1px solid black; /*Temporary so we can see where everything is positioned*/
+}
+
+body {
+    min-width: 800px;
+}
+
+.navigation {
+    background-color: white;
+    position: fixed;
+    padding: 5px 20px;
+    width: 100%;
+    z-index: 100;
+}
+
+.navigation nav ul li {
+    display: inline;
+    float: left;
+    padding: 10px 15px;
+    margin: 7px 20px 0px 0px;
+    border-radius: 5px;
+}
+
+.navigation nav ul li:first-child {
+    padding: 5px;
+    margin: 0px 30px 0px 0px;
+}
+
+.navigation nav ul li:hover {
+    background-color: #eaf2ff;
+}
+
+.navigation nav ul li a img {
+    vertical-align: top;
+}
+
+.navigation nav ul li a {
+    text-decoration:none;
+}
+
+a.anchor {
+    display: block;
+    position: relative;
+    top: -148px;
+    visibility: hidden;
+}
+
+.pushdown {
+    height: 70px;
+}
+
+.logo {
+	padding: 100px 0px;
+	font-size: 80px;
+	background-color: #e8f0ff;
+    margin: auto;
+}
+
+h1 {
+    padding: 30px 0px 0px 0px;
+	font-size: 40px;
+	font-weight: normal;
+}
+
+article {
+	background: white;
+	padding: 0px 0px 30px 0px;
+}
+
+p {
+	padding: 20px 10% 0px 10%;
+}
+
+.timeline_chart {
+    min-width: 750px;
+    width: 75%;
+    margin: 20px auto 0px auto;
+}
+
+.button {
+    border-radius: 10px;
+    padding: 10px 40px;
+    background-color: #e8f0ff;
+}
+
+.list_item {
+    width: 75%;
+    min-width: 750px;
+    margin: 30px auto 0px auto;
+}
+
+.list_item:last-child {
+    min-height: 0px;
+}
+
+.list_item h3 {
+    text-align: left;
+}
+
+.list_item p {
+    text-align: left;
+    padding: 0px;
+    margin: 10px 0px 0px 0px;
+}
+
+.list_item a {
+    display: inline-block;
+    text-decoration:none;
+    margin: 10px 0px 0px 0px;
+}
+
+.horizontal_list_item {
+    display: inline-block;
+    padding: 20px 30px 0px 30px;
+    margin: 0px;
+}
+
+.horizontal_list_item p{
+    margin: 0px;
+    padding: 0px;
+}
+
+#timeline {
+    background-color: #52cfd3;
+}
+
+#assessment {
+    background-color: #35ff96;
+}
+
+#team {
+    background-color: #c34cff;
+}

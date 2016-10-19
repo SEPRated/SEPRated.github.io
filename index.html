@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="main.css"/>
+		<title>SEP-R-ated</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+			  $("a").on('click', function(event) {
+
+				if (this.hash !== "") {
+				  event.preventDefault();
+
+				  var hash = this.hash;
+
+				  $('html, body').animate({
+					scrollTop: $(hash).offset().top
+				  }, 1000, function(){}
+				  );
+				}
+			  });
+			});
+		</script>
+		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+		<script type="text/javascript">
+			google.charts.load('current', {'packages':['gantt']});
+			google.charts.setOnLoadCallback(drawChart);
+
+			function daysToMilliseconds(days) {
+			  return days * 24 * 60 * 60 * 1000;
+			}
+
+			function drawChart() {
+
+			  var data = new google.visualization.DataTable();
+			  data.addColumn('string', 'Task ID');
+			  data.addColumn('string', 'Task Name');
+			  data.addColumn('date', 'Start Date');
+			  data.addColumn('date', 'End Date');
+			  data.addColumn('number', 'Duration');
+			  data.addColumn('number', 'Percent Complete');
+			  data.addColumn('string', 'Dependencies');
+
+			  data.addRows([
+				['Research', 'Find sources',
+				 new Date(2015, 0, 1), new Date(2015, 0, 5), null,  100,  null],
+				['Write', 'Write paper',
+				 null, new Date(2015, 0, 9), daysToMilliseconds(3), 25, 'Research,Outline'],
+				['Cite', 'Create bibliography',
+				 null, new Date(2015, 0, 7), daysToMilliseconds(1), 20, 'Research'],
+				['Complete', 'Hand in paper',
+				 null, new Date(2015, 0, 10), daysToMilliseconds(1), 0, 'Cite,Write'],
+				['Outline', 'Outline paper',
+				 null, new Date(2015, 0, 6), daysToMilliseconds(1), 100, 'Research']
+			  ]);
+
+			  var options = {
+				height: 275
+			  };
+
+			  var chart = new google.visualization.Gantt(document.getElementById('timeline_chart'));
+
+			  resizeChart();
+
+			  function resizeChart () {
+				  chart.draw(data, options);
+		      }
+			  if (document.addEventListener) {
+		      	  window.addEventListener('resize', resizeChart);
+			  }
+			  else if (document.attachEvent) {
+				  window.attachEvent('onresize', resizeChart);
+			  }
+			  else {
+				  window.resize = resizeChart;
+			  }
+			}
+
+
+		</script>
+	</head>
+
+	<body>
+
+		<div class="navigation">
+			<nav>
+				<ul>
+					<li><a href="#home"><img src="Logos/NoTextLogo.png"/></a></li>
+					<li><a href="#timeline_link">Timeline</a></li>
+					<li><a href="#assessment_link">Assessment Links</a></li>
+					<li><a href="#team_link">The Team</a></li>
+				</ul>
+			</nav>
+		</div>
+
+		<div class="pushdown" id="home"></div>
+
+		<header>
+			<h1 class="logo">SEP-R-ated</h1>
+		</header>
+
+		<section>
+			<article id="timeline">
+				<h1>Timeline</h1>
+				<a class="anchor" id="timeline_link"></a>
+
+				<p>An example of a google chart we could use.</p>
+
+				<div class="timeline_chart" id="timeline_chart"></div>
+			</article>
+
+			<article id="assessment">
+				<h1>Assessment Links</h1>
+				<a class="anchor" id="assessment_link"></a>
+
+				<div class="list_item">
+					<h3>Assessment 1</h3>
+					<p>This is the text description for section 1. This is the text description for section 1. This is the text description for section 1. This is the text description for section 1. This is the text description for section 1. This is the text description for section 1.</p>
+					<a class="button" href="http://www.google.co.uk">Download for Assessment 1</a>
+				</div>
+
+				<div class="list_item">
+					<h3>Assessment 2</h3>
+					<p>This is the text description for section 2. This is the text description for section 2. This is the text description for section 2. This is the text description for section 2. This is the text description for section 2. This is the text description for section 2.</p>
+					<a class="button" href="http://www.google.co.uk">Download for Assessment 2</a>
+				</div>
+
+				<div class="list_item">
+					<h3>Assessment 3</h3>
+					<p>This is the text description for section 3. This is the text description for section 3. This is the text description for section 3. This is the text description for section 3. This is the text description for section 3. This is the text description for section 3.</p>
+					<a class="button" href="http://www.google.co.uk">Download for Assessment 3</a>
+				</div>
+
+				<div class="list_item">
+					<h3>Assessment 4</h3>
+					<p>This is the text description for section 4. This is the text description for section 4. This is the text description for section 4. This is the text description for section 4. This is the text description for section 4. This is the text description for section 4.</p>
+					<a class="button" href="http://www.google.co.uk">Download for Assessment 4</a>
+				</div>
+			</article>
+
+			<article id="team">
+				<h1>The Team</h1>
+				<a class="anchor" id="team_link"></a>
+
+				<div class="horizontal_list_item">
+					<p>Matthew Turton Parry</p>
+					<p>mjtp501@york.ac.uk</p>
+				</div>
+				<div class="horizontal_list_item">
+					<p>Julia Fellows</p>
+					<p>jcf518@york.ac.uk</p>
+				</div>
+				<div class="horizontal_list_item">
+					<p>Theo Barber-Bany</p>
+					<p>tbb505@york.ac.uk</p>
+				</div>
+				<div class="horizontal_list_item">
+					<p>Matthew Dunn</p>
+					<p>md995@york.ac.uk</p>
+				</div>
+				<div class="horizontal_list_item">
+					<p>Mikolaj Bernaciak</p>
+					<p>mb1427@york.ac.uk</p>
+				</div>
+				<div class="horizontal_list_item">
+					<p>Tim Bradgate</p>
+					<p>tjb545@york.ac.uk</p>
+				</div>
+			</article>
+		</section>
+	</body>
+
+</html>
