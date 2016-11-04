@@ -56,13 +56,6 @@ a.anchor {
     height: 70px;
 }
 
-.logo {
-	padding: 100px 0px;
-	font-size: 80px;
-	background-color: #A1EDA1;
-    margin: auto;
-}
-
 h1 {
     padding: 30px 0px 0px 0px;
 	font-size: 40px;
@@ -120,6 +113,7 @@ p {
     padding: 0px;
 }
 
+/* Home page */
 #timeline {
     background-color: #A1EDCE;
 }
@@ -132,6 +126,33 @@ p {
     background-color: #A1CAED;
 }
 
+/* Agile */
+
+#scrum {
+    background-color: #A1EDA1;
+}
+
+#secretary {
+    background-color: #A1EDCE;
+}
+
+#product {
+    background-color: #A1EDED;
+}
+
+#librarian {
+    background-color: #A1CAED;
+}
+
+#report {
+    background-color: #ABA1ED;
+}
+
+#risk {
+    background-color: #D1A1ED;
+}
+
+/* Assessment 1 */
 #download {
     background-color: #A1EDA1;
 }
