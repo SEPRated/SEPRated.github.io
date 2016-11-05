@@ -46,7 +46,7 @@
 			  data.addRows([
 
 				 ['Updates2', 'Updates on Assessment 1', 'Assessment 2',
-				 new Date(2016, 10, 9), new Date(2017, 0, 17), null,  0,  null],
+				 new Date(2016, 10, 9), new Date(2016, 10, 30), null,  0,  null],
 				 ['Arch2', 'Architecture Report', 'Assessment 2',
 				 new Date(2016, 10, 9), new Date(2016, 10, 30), null,  0,  null],
 				 ['GUI2', 'GUI Report', 'Assessment 2',
@@ -55,29 +55,36 @@
 				 new Date(2016, 10, 23), new Date(2017, 0, 17), null,  0,  'Arch2,GUI2'],
 				 ['Test2', 'Test Report', 'Assessment 2',
 				 new Date(2016, 10, 30), new Date(2017, 0, 17), null,  0,  null],
+				 ['Review2', 'Review Assessment 2', 'Assessment 2',
+				 new Date(2017, 0, 17), new Date(2017, 0, 20), null,  0,  'Test2, Impl2'],
 
 				 ['NewProjectReview3', 'New Project Review', 'Assessment 3',
-				 new Date(2017, 0, 24), new Date(2017, 0, 31), null,  0,  'Impl2,Test2,Updates2'],
+				 new Date(2017, 0, 20), new Date(2017, 0, 31), null,  0,  'Review2'],
 				 ['Change3', 'Change Report', 'Assessment 3',
 				 new Date(2017, 0, 31), new Date(2017, 1, 21), null,  0,  'NewProjectReview3'],
-				 ['IMPL3', 'Implementation & Report', 'Assessment 3',
+				 ['Impl3', 'Implementation & Report', 'Assessment 3',
 				 new Date(2017, 0, 31), new Date(2017, 1, 21), null,  0,  'NewProjectReview3'],
+				 ['Review3', 'Review Assessment 3', 'Assessment 3',
+				 new Date(2017, 1, 21), new Date(2017, 1, 23), null,  0,  'Change3, Impl3'],
 
 				 ['NewProjectReview4', 'New Project Review', 'Assessment 4',
-				 new Date(2017, 1, 21), new Date(2017, 1, 28), null,  0,  'IMPL3,Change3'],
+				 new Date(2017, 1, 23), new Date(2017, 1, 28), null,  0,  'Review3'],
 				 ['IMPL4', 'Implementation & Report', 'Assessment 4',
 				 new Date(2017, 1, 28), new Date(2017, 2, 27), null,  0,  'NewProjectReview4'],
 				 ['AT4', 'Architecture & Traceability Report', 'Assessment 4',
 				 new Date(2017, 2, 27), new Date(2017, 3, 10), null,  0,  'IMPL4'],
 				 ['ET4', 'Evaluation & Testing Report', 'Assessment 4',
 				 new Date(2017, 2, 27), new Date(2017, 3, 10), null,  0,  'IMPL4'],
-				 ['Review4', 'Project Review Report', 'Assessment 4',
-				 new Date(2017, 3, 12), new Date(2017, 3, 26), null,  0,  'AT4,ET4'],
+				 ['PReview4', 'Project Review Report', 'Assessment 4',
+				 new Date(2017, 3, 10), new Date(2017, 3, 26), null,  0,  'AT4,ET4'],
+				['Review4', 'Review Assessment 4', 'Assessment 4',
+				 new Date(2017, 3, 26), new Date(2017, 4, 1), null,  0,  'PReview4'],
 			  ]);
 
-			  var options = {
-				  height: 600,
+				var options = {
+				  height: 720,
 				  gantt: {
+					criticalPathEnabled: true,
 					arrow: {
 					  angle: 150,
 					  width: 3,
@@ -125,11 +132,11 @@
 
 		<div class="pushdown" id="home"></div>
 
-		<artcile id="logo">
-			<img src="Logos/SEP-R-ated.PNG"/>
-		</artcile>
-
 		<section>
+			<article id="logo">
+				<img class="logo_image" src="Logos/SEP-R-ated.PNG"/>
+			</article>
+
 			<article id="timeline">
 				<h1>Timeline</h1>
 				<a class="anchor" id="timeline_link"></a>
@@ -142,7 +149,8 @@
 
 				<div class="list_item">
 					<h3>Assessment 1</h3>
-					<p></p>
+					<p>This assessment consists of the Requirements, Architecture, Method Planning and Mitigation,
+						and Risk Assessment and Mitigation.</p>
 					<a class="button" href="assessment1.html">Click here for Assessment 1</a>
 				</div>
 			</article>

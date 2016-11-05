@@ -5,7 +5,6 @@
     font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
 	color: black;
 	text-align: center;
-	/*border: 1px solid black; /*Temporary so we can see where everything is positioned*/
 }
 
 body {
@@ -56,6 +55,11 @@ a.anchor {
     height: 70px;
 }
 
+.logo_image {
+    vertical-align: top;
+    margin-top: 30px;
+}
+
 h1 {
     padding: 30px 0px 0px 0px;
 	font-size: 40px;
@@ -104,7 +108,7 @@ p {
 
 .horizontal_list_item {
     display: inline-block;
-    padding: 20px 30px 0px 30px;
+    padding: 20px 20px 0px 20px;
     margin: 0px;
 }
 
@@ -114,6 +118,10 @@ p {
 }
 
 /* Home page */
+#logo {
+    background-color: #A1EDA1;
+}
+
 #timeline {
     background-color: #A1EDCE;
 }
@@ -127,7 +135,6 @@ p {
 }
 
 /* Agile */
-
 #scrum {
     background-color: #A1EDA1;
 }
