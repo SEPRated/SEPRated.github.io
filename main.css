@@ -1,10 +1,10 @@
 * {
-	margin: 0px;
-	padding: 0px;
-	font-size: 22px;
-    font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
-	color: black;
-	text-align: center;
+    margin: 0px;
+    padding: 0px;
+    font-size: 22px;
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    color: black;
+    text-align: center;
 }
 
 body {
@@ -41,7 +41,7 @@ body {
 }
 
 .navigation nav ul li a {
-    text-decoration:none;
+    text-decoration: none;
 }
 
 a.anchor {
@@ -62,17 +62,17 @@ a.anchor {
 
 h1 {
     padding: 30px 0px 0px 0px;
-	font-size: 40px;
-	font-weight: normal;
+    font-size: 40px;
+    font-weight: normal;
 }
 
 article {
-	background: white;
-	padding: 0px 0px 30px 0px;
+    background: white;
+    padding: 0px 0px 30px 0px;
 }
 
 p {
-	padding: 20px 10% 0px 10%;
+    padding: 20px 10% 0px 10%;
 }
 
 .timeline_chart {
@@ -86,7 +86,7 @@ p {
     padding: 10px 40px;
     background-color: white;
     display: inline-block;
-    text-decoration:none;
+    text-decoration: none;
     margin: 10px 0px 0px 0px;
 }
 
@@ -112,7 +112,7 @@ p {
     margin: 0px;
 }
 
-.horizontal_list_item p{
+.horizontal_list_item p {
     margin: 0px;
     padding: 0px;
 }
@@ -178,4 +178,29 @@ p {
 
 #risks {
     background-color: #ABA1ED;
+}
+
+/* Assessment 2 */
+#download2 {
+    background-color: #A1EDA1;
+}
+
+#c_architecture {
+    background-color: #A1EDCE;
+}
+
+#implementation {
+    background-color: #A1EDED;
+}
+
+#gui {
+    background-color: #A1CAED;
+}
+
+#testing {
+    background-color: #ABA1ED;
+}
+
+#updates {
+    background-color: #D1A1ED;
 }

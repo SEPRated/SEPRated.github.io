@@ -1,31 +1,95 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-		<link rel="stylesheet" type="text/css" href="main.css"/>
-		<title>Assessment 2</title>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-		<script>
-			$(document).ready(function(){
-			  $("a").on('click', function(event) {
+<head>
+    <link rel="stylesheet" type="text/css" href="main.css"/>
+    <title>Assessment 2</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("a").on('click', function (event) {
 
-				if (this.hash !== "") {
-				  event.preventDefault();
+                if (this.hash !== "") {
+                    event.preventDefault();
 
-				  var hash = this.hash;
+                    var hash = this.hash;
 
-				  $('html, body').animate({
-					scrollTop: $(hash).offset().top
-				  }, 1000, function(){}
-				  );
-				}
-			  });
-			});
-		</script>
-	</head>
-    
-    <body>
-        
-    </body>
+                    $('html, body').animate({
+                                scrollTop: $(hash).offset().top
+                            }, 1000, function () {
+                            }
+                    );
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+<div class="navigation">
+    <nav>
+        <ul>
+            <li><a href="index.html"><img width="50" height="50" src="Logos/SEP-R-ated-Textless.PNG"/></a></li>
+            <li><a href="#download_link">Download</a></li>
+            <li><a href="#c_architecture_link">Architecture</a></li>
+            <li><a href="#implementation_link">Implementation</a></li>
+            <li><a href="#gui_link">GUI Report</a></li>
+            <li><a href="#testing_link">Software Testing</a></li>
+            <li><a href="#assessment1_update_link">Updates</a></li>
+        </ul>
+    </nav>
+</div>
+
+<div class="pushdown" id="home"></div>
+
+<section>
+    <article id="download2">
+        <h1>Download</h1>
+        <a class="anchor" id="download_link"></a>
+        <a class="button" href="">Download all submitted documents for Assessment 2</a>
+    </article>
+
+    <article id="c_architecture">
+        <h1>Architecture</h1>
+        <a class="anchor" id="c_architecture_link"></a>
+        <a class="button" href="">Architecture</a>
+    </article>
+
+    <article id="implementation">
+        <h1>Implementation</h1>
+        <a class="anchor" id="implementation_link"></a>
+        <a class="button" href="">Implementation</a>
+    </article>
+
+    <article id="gui">
+        <h1>GUI Report</h1>
+        <a class="anchor" id="gui_link"></a>
+        <a class="button" href="">GUI Report</a>
+    </article>
+
+    <article id="testing">
+        <h1>Software Testing Report</h1>
+        <a class="anchor" id="testing_link"></a>
+        <a class="button" href="">Software Testing Report</a>
+    </article>
+
+    <article id="updates">
+        <h1>Assessment 1 Updates</h1>
+        <a class="anchor" id="assessment1_update_link"></a>
+        <div class="horizontal_list_item">
+            <a class="button" href="">Requirements</a>
+        </div>
+
+        <div class="horizontal_list_item">
+            <a class="button" href="">Method Selection and Planning</a>
+        </div>
+
+        <div class="horizontal_list_item">
+            <a class="button" href="">Risk Assessment and Mitigation</a>
+        </div>
+    </article>
+</section>
+</body>
 
 </html>

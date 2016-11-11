@@ -1,99 +1,100 @@
 <!DOCTYPE html>
 
 <html>
-	<head>
-		<link rel="stylesheet" type="text/css" href="main.css"/>
-		<title>Assessment 1</title>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-		<script>
-			$(document).ready(function(){
-			  $("a").on('click', function(event) {
+<head>
+    <link rel="stylesheet" type="text/css" href="main.css"/>
+    <title>Assessment 1</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("a").on('click', function (event) {
 
-				if (this.hash !== "") {
-				  event.preventDefault();
+                if (this.hash !== "") {
+                    event.preventDefault();
 
-				  var hash = this.hash;
+                    var hash = this.hash;
 
-				  $('html, body').animate({
-					scrollTop: $(hash).offset().top
-				  }, 1000, function(){}
-				  );
-				}
-			  });
-			});
-		</script>
-	</head>
+                    $('html, body').animate({
+                                scrollTop: $(hash).offset().top
+                            }, 1000, function () {
+                            }
+                    );
+                }
+            });
+        });
+    </script>
+</head>
 
-	<body>
+<body>
 
-		<div class="navigation">
-			<nav>
-				<ul>
-					<li><a href="index.html"><img width="50" height="50" src="Logos/SEP-R-ated-Textless.PNG"/></a></li>
-					<li><a href="#download_link">Download</a></li>
-					<li><a href="#requirements_link">Requirements</a></li>
-					<li><a href="#architecture_link">Architecture</a></li>
-					<li><a href="#method_link">Method</a></li>
-					<li><a href="#risks_link">Risks</a></li>
-				</ul>
-			</nav>
-		</div>
+<div class="navigation">
+    <nav>
+        <ul>
+            <li><a href="index.html"><img width="50" height="50" src="Logos/SEP-R-ated-Textless.PNG"/></a></li>
+            <li><a href="#download_link">Download</a></li>
+            <li><a href="#requirements_link">Requirements</a></li>
+            <li><a href="#architecture_link">Architecture</a></li>
+            <li><a href="#method_link">Method</a></li>
+            <li><a href="#risks_link">Risks</a></li>
+        </ul>
+    </nav>
+</div>
 
-		<div class="pushdown" id="home"></div>
+<div class="pushdown" id="home"></div>
 
-		<section>
-			<article id="download">
-				<h1>Download</h1>
-				<a class="anchor" id="download_link"></a>
+<section>
+    <article id="download">
+        <h1>Download</h1>
+        <a class="anchor" id="download_link"></a>
 
-				<a class="button" href="Assessment1/Assessment1.zip">Download all submitted documents for Assessment 1</a>
-			</article>
+        <a class="button" href="Assessment1/Assessment1.zip">Download all submitted documents for Assessment 1</a>
+    </article>
 
-			<article id="requirements">
-				<h1>Requirements</h1>
-				<a class="anchor" id="requirements_link"></a>
+    <article id="requirements">
+        <h1>Requirements</h1>
+        <a class="anchor" id="requirements_link"></a>
 
-				<div class="horizontal_list_item">
-					<a class="button" href="Assessment1/Req1.pdf">Requirements</a>
-				</div>
-				<div class="horizontal_list_item">
-					<a class="button" href="Assessment1/UseCases.pdf">Use Cases</a>
-				</div>
-			</article>
+        <div class="horizontal_list_item">
+            <a class="button" href="Assessment1/Req1.pdf">Requirements</a>
+        </div>
+        <div class="horizontal_list_item">
+            <a class="button" href="Assessment1/UseCases.pdf">Use Cases</a>
+        </div>
+    </article>
 
-			<article id="architecture">
-				<h1>Architecture</h1>
-				<a class="anchor" id="architecture_link"></a>
+    <article id="architecture">
+        <h1>Architecture</h1>
+        <a class="anchor" id="architecture_link"></a>
 
-				<div class="horizontal_list_item">
-					<a class="button" href="Assessment1/Arch1.pdf">Architecture</a>
-				</div>
-			</article>
+        <div class="horizontal_list_item">
+            <a class="button" href="Assessment1/Arch1.pdf">Architecture</a>
+        </div>
+    </article>
 
-			<article id="method">
-				<h1>Method Selection and Planning</h1>
-				<a class="anchor" id="method_link"></a>
+    <article id="method">
+        <h1>Method Selection and Planning</h1>
+        <a class="anchor" id="method_link"></a>
 
-				<div class="horizontal_list_item">
-					<a class="button" href="Assessment1/Plan1.pdf">Method Selection and Planning</a>
-				</div>
-				<div class="horizontal_list_item">
-					<a class="button" href="Assessment1/Backlog.pdf">Project Backlog</a>
-				</div>
-			</article>
+        <div class="horizontal_list_item">
+            <a class="button" href="Assessment1/Plan1.pdf">Method Selection and Planning</a>
+        </div>
+        <div class="horizontal_list_item">
+            <a class="button" href="Assessment1/Backlog.pdf">Project Backlog</a>
+        </div>
+    </article>
 
-			<article id="risks">
-				<h1>Risk Assessment and Mitigation</h1>
-				<a class="anchor" id="risks_link"></a>
+    <article id="risks">
+        <h1>Risk Assessment and Mitigation</h1>
+        <a class="anchor" id="risks_link"></a>
 
-				<div class="horizontal_list_item">
-					<a class="button" href="Assessment1/Risk1.pdf">Risk Assessment and Mitigation</a>
-				</div>
-				<div class="horizontal_list_item">
-					<a class="button" href="Assessment1/RiskTable.jpg">Rank Table</a>
-				</div>
-			</article>
-		</section>
-	</body>
+        <div class="horizontal_list_item">
+            <a class="button" href="Assessment1/Risk1.pdf">Risk Assessment and Mitigation</a>
+        </div>
+        <div class="horizontal_list_item">
+            <a class="button" href="Assessment1/RiskTable.jpg">Rank Table</a>
+        </div>
+    </article>
+</section>
+</body>
 
 </html>
