@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+		<link rel="stylesheet" type="text/css" href="main.css"/>
+		<title>Assessment 2</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+			  $("a").on('click', function(event) {
+
+				if (this.hash !== "") {
+				  event.preventDefault();
+
+				  var hash = this.hash;
+
+				  $('html, body').animate({
+					scrollTop: $(hash).offset().top
+				  }, 1000, function(){}
+				  );
+				}
+			  });
+			});
+		</script>
+	</head>
+    
+    <body>
+        
+    </body>
+
+</html>
