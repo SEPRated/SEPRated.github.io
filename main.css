@@ -159,6 +159,14 @@ p {
     background-color: #D1A1ED;
 }
 
+#lead-dev {
+	background-color: #EDA1EC;
+}
+
+#dev-pair {
+	background-color: #EDA1C4;
+}
+
 /* Assessment 1 */
 #download {
     background-color: #A1EDA1;
@@ -203,4 +211,13 @@ p {
 
 #updates {
     background-color: #D1A1ED;
+}
+
+/*Assessment 3 Plan */
+#timeline2 {
+	background-color: #A1EDA1
+}
+
+#backlog {
+	background-color: #A1EDCE;
 }
