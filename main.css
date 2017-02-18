@@ -159,12 +159,16 @@ p {
     background-color: #D1A1ED;
 }
 
-#lead-dev {
+#method-manager {
 	background-color: #EDA1EC;
 }
 
-#dev-pair {
+#lead-dev {
 	background-color: #EDA1C4;
+}
+
+#dev-pair {
+	background-color: #EDA1A1;
 }
 
 /* Assessment 1 */
