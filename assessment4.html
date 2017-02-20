@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="main.css"/>
+    <title>Assessment 4</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("a").on('click', function (event) {
+
+                if (this.hash !== "") {
+                    event.preventDefault();
+
+                    var hash = this.hash;
+
+                    $('html, body').animate({
+                                scrollTop: $(hash).offset().top
+                            }, 1000, function () {
+                            }
+                    );
+                }
+            });
+        });
+    </script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {'packages': ['gantt']});
+        google.charts.setOnLoadCallback(drawChart);
+
+        function daysToMilliseconds(days) {
+            return days * 24 * 60 * 60 * 1000;
+        }
+
+        function drawChart() {
+
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Task ID');
+            data.addColumn('string', 'Task Name');
+            data.addColumn('string', 'Resource');
+            data.addColumn('date', 'Start Date');
+            data.addColumn('date', 'End Date');
+            data.addColumn('number', 'Duration');
+            data.addColumn('number', 'Percent Complete');
+            data.addColumn('string', 'Dependencies');
+
+            data.addRows([
+				['ProjectSelection', 'Project Selection', 'Project Necessities',
+					new Date(2017, 1, 22), new Date(2017, 1, 26), null, 0, null],
+				['CodeArchReview', 'Code/Architecture Review', 'Project Review',
+					new Date(2017, 1, 26), new Date(2017, 1, 28), null, 0, 'ProjectSelection'],
+				['CorrectImpact', 'Corrective Impact Analysis', 'Project Review',
+					new Date(2017, 1, 28), new Date(2017, 2, 3), null, 0, 'CodeArchReview'],
+				['RequirementImpact', 'Requirement Impact Analysis', 'Change Report', 
+					new Date(2017, 1, 26), new Date(2017, 2, 1), null, 0, 'ProjectSelection'],
+				['ArchitectureImpact', 'Architecture Impact Analysis', 'Change Report',
+					new Date(2017, 1, 28), new Date(2017, 2, 3), null, 0, 'CodeArchReview'],
+				['CorrectImpl', 'Corrective Implementation/Refactoring', 'Implementation',
+					new Date(2017, 2, 3), new Date(2017, 2, 11), null, 0, 'ArchitectureImpact, CorrectImpact'],
+				['RiskReview', 'Risk Review', 'Change Report',
+					new Date(2017, 1, 26), new Date(2017, 2, 2), null, 0, 'ProjectSelection'],
+				['Documentation', 'Documentation', 'Project Necessities',
+					new Date(2017, 2, 26), new Date(2017, 2, 12), null, 0, 'ProjectSelection'],
+				['ChangeImpl', 'Change Implementation', 'Implementation', 
+					new Date(2017, 2, 7), new Date(2017, 3, 24), null, 0, 'ArchitectureImpact, CorrectImpact'],
+				['UnitTesting', 'Unit Testing', 'Testing', 
+					new Date(2017, 2, 7), new Date(2017, 3, 27), null, 0, 'CorrectImpl'],
+				['PlayTesting', 'Play Testing', 'Testing',
+					new Date(2017, 3, 15), new Date(2017, 3, 30), null, 0, 'ChangeImpl, CorrectImpl'],
+				['BugErrorRet', 'Bug/Error Rectification', 'Testing',
+					new Date(2017, 3, 15), new Date(2017, 3, 30), null, 0, 'PlayTesting, UnitTesting'],
+				['Review', 'Review Material', 'Project Necessities',
+					new Date(2017, 3, 30), new Date(2017, 4, 2), null, 0, 'Documentation, BugErrorRet'],
+				['Presentation', 'Presentation Preparation', 'Project Necessities',
+					new Date(2017, 3, 20), new Date(2017, 3, 25), null, 0, null],
+            ]);
+
+            var options = {
+                height: 600,
+                gantt: {
+                    criticalPathEnabled: false,
+                    arrow: {
+                        angle: 150,
+                        width: 3,
+                        radius: 5,
+                        spaceAfter: 6
+                    }
+                }
+            };
+
+            var chart = new google.visualization.Gantt(document.getElementById('timeline_chart'));
+
+            resizeChart();
+
+            function resizeChart() {
+                chart.draw(data, options);
+            }
+
+            if (document.addEventListener) {
+                window.addEventListener('resize', resizeChart);
+            }
+            else if (document.attachEvent) {
+                window.attachEvent('onresize', resizeChart);
+            }
+            else {
+                window.resize = resizeChart;
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+<div class="navigation">
+    <nav>
+        <ul>
+            <li><a href="index.html"><img width="50" height="50" src="Logos/SEP-R-ated-Textless.PNG"/></a></li>
+            <li><a href="#timeline_link">Timeline</a></li>
+            <li><a href="#backlog_link">Backlog</a></li>
+        </ul>
+    </nav>
+</div>
+
+<div class="pushdown" id="home"></div>
+
+<section>
+    <article id="timelineAssessment3">
+        <h1>Assessment 4 Timeline</h1>
+        <a class="anchor" id="timeline_link"></a>
+        <div class="timeline_chart" id="timeline_chart"></div>
+		<div><p>To see the description of each task please refer to the following backlog.</p></div>
+    </article>
+
+    <article id="backlog">
+        <h1>Plan Backlog</h1>
+        <a class="anchor" id="backlog_link"></a>
+        <a class="button" href="Assessment3/backlog-4only.pdf" target="_blank">Backlog</a>
+    </article>
+
+</body>
+
+</html>
