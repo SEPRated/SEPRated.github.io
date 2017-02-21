@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="main.css"/>
+		<title>Agile Team Roles</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+			  $("a").on('click', function(event) {
+
+				if (this.hash !== "") {
+				  event.preventDefault();
+
+				  var hash = this.hash;
+
+				  $('html, body').animate({
+					scrollTop: $(hash).offset().top
+				  }, 1000, function(){}
+				  );
+				}
+			  });
+			});
+		</script>
+	</head>
+
+	<body>
+
+		<div class="navigation">
+			<nav>
+				<ul>
+					<li><a href="index.html"><img width="50" height="50" src="Logos/SEP-R-ated-Textless.PNG"/></a></li>
+					<li><a href="#scrum_link">Scrum Master</a></li>
+					<li><a href="#secretary_link">Secretary</a></li>
+					<li><a href="#product_link">Product Owner</a></li>
+					<li><a href="#librarian_link">Librarian</a></li>
+					<li><a href="#report_link">Report Editor</a></li>
+					<li><a href="#risk_link">Risk Manager</a></li>
+					<li><a href="#method-manager">Method Manager</a></li>
+					<li><a href="#lead-dev">Lead Dev</a></li>
+					<li><a href="#dev-pair">Dev Pair</a></li>
+					<li><a href="#oop">Open Plan Programming</a></li>
+				</ul>
+			</nav>
+		</div>
+
+		<div class="pushdown" id="home"></div>
+
+		<section>
+			<article id="scrum">
+				<h1>Scrum Master</h1>
+				<a class="anchor" id="scrum_link"></a>
+
+				<p>The Scrum Master organises team scrums / meetings and ensures each pack is making good progress.
+				They are responsible for motivating the team and making sure any queries are dealt with.</p>
+
+				<p>Scrum Master: Theo Barber-Bany</p>
+			</article>
+
+			<article id="secretary">
+				<h1>Secretary</h1>
+				<a class="anchor" id="secretary_link"></a>
+
+				<p>The Secretary keeps track of what was discussed in each meeting / scrum and is responsible for
+				making notes of these in a minutes document. They also keep track of the group attendance throughout
+				the meetings.</p>
+
+				<p>Secretary: Julia Fellows</p>
+			</article>
+			<article id="product">
+				<h1>Product Owner</h1>
+				<a class="anchor" id="product_link"></a>
+
+				<p>Product Owners are the primary communicators with the client and ensure the product being designed and 
+				developed by the team matches the client's requirements. They’re also responsible for monitoring any changes to 
+				requirements and recording the reasoning for this. </p>
+
+				<p>Product Owners: Julia Fellows, Tim Bradgate</p>
+			</article>
+			<article id="librarian">
+				<h1>Librarian</h1>
+				<a class="anchor" id="librarian_link"></a>
+
+				<p>The Librarian's job is to make sure all documentation is secure and organised on the teams
+				shared drive. They also oversee the version control for the software and make sure that all changes
+				made do not break the solution.</p>
+
+				<p>Librarian: Tim Bradgate</p>
+			</article>
+			<article id="report">
+				<h1>Report Editor</h1>
+				<a class="anchor" id="report_link"></a>
+
+				<p>Report Editors ensure all of the documentation content is consistent and follows a constant visual
+				theme. They also highlight any mistakes or problems they find with the team.</p>
+
+				<p>Report Editors: Matthew Dunn, Matthew Turton Parry</p>
+			</article>
+			<article id="risk">
+				<h1>Risk Manager</h1>
+				<a class="anchor" id="risk_link"></a>
+
+				<p>The Risk Manager is responsible for the maintenance of the project risks and makes the team aware of any risks 
+				that are likely to happen. They have a mitigation strategy for each risk. They’re also responsible for documenting any 
+				changes to risk management methodology as well as documenting the reasons for any sudden changes in risk ranks.</p>
+
+				<p>Risk Manager: Mikolaj Bernaciak</p>
+			</article>
+			<article id="method-manager">
+				<h1>Method Manager</h1>
+				
+				<p>The Method Manager is responsible for ensuring that any changes to operational practices are recorded and justified, be 
+				it team working, organisational structure or tool usage.</p>
+				
+				<p>Method Manager: Matthew Dunn</p>
+			</article>
+			<article id="lead-dev">
+				<h1>Lead Developer</h1>
+		
+				<p>Lead developers are responsible for orginisation of implementation and monitoring progress. They're also
+				responsible for ensuring that testing is thorough and correct.</p>
+				
+				<p>Lead Developers: Matthew Turton Parry, Tim Bradgate</p>
+			</article>
+			<article id="dev-pair">
+				<h1>Lead-Dev Pairs</h1>
+				
+				<p>A programming pair consists of a lead developer and a normal developer. The developer sits at the computer
+				and programs the current feature whilst the lead developer considers the overall program and efficiency, if the leads
+				believes they can improve on the code the may do so but must explain why.</p>
+			</article>
+			<article id="oop">
+				<h1>Open Plan Programming</h1>
+				
+					<br>
+				
+				<h2>What is it?</h2>
+				
+					<p>Open plan programming or OPP for brevity, is an implementation methodology developed by our team to improve productivity 
+					while maintaining quality. The team conducts implementation within the same environment and in close proximity,with each member 
+					responsible for their own unique tasks (these tasks are undertaken in unique development branches). Discussions and brainstorming  
+					is encouraged, this has improved the quality of the code and helped support inexperienced members by exposing them to the thought 
+					processes of more skilled members. Both experienced and inexperienced members are free to ask for advice and assistance when dealing 
+					with problems and critical implementation issues (such as the best use of data structures), this also allows each member to be aware of 
+					the current progression of development and provides everyone with information regarding the structure of the project - meaning members can 
+					quickly adapt and assist in the development of issues that were not assigned to them.</p>
+		
+					<br>
+				
+				<h2>Why are we using it?</h2>
+				
+					<p>Following the phase 2 of the project and early phase 3 the team raised concerns regarding the progress of development whilst using pair 
+					programming. Despite the fact that all team members agreed that the quality of code had improved, the breadth of development was adversely 
+					affected. Through developing in an open plan environment with individual deliverables, we have improved our development breadth whilst keeping 
+					the advantages of developing in pairs (that being reduced stress and less erroneous code). This open environment also encourages inexperienced 
+					members to engage with the team and seek guidance, in addition this it promotes teamwork and the development/strengthening of positive relations. </p>
+					
+			</article>
+		</section>
+	</body>
+
+</html>
