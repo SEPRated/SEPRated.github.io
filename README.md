@@ -1,1 +1,0 @@
-# seprated.github.io
